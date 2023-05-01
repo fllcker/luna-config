@@ -10,3 +10,12 @@ spring:
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/auth/**
+            
+    loadbalancer:
+        ribbon:
+          enabled: true
+          eureka:
+            enabled: false
+          servers:
+            - url: http://185.125.202.202:9092
+            - url: http://185.125.202.202:9091
