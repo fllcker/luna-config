@@ -1,13 +1,16 @@
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes: 
         - id: USERS-SERVICE
-          uri: http://USERS-SERVICE
+          uri: lb://USERS-SERVICE
           predicates:
             - Path=/users/**
         - id: AUTH-SERVICE
-          uri: http://AUTH-SERVICE
+          uri: lb://AUTH-SERVICE
           predicates:
             - Path=/auth/**
             
