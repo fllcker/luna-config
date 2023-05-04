@@ -6,11 +6,11 @@ spring:
           enabled: true
       routes: 
         - id: USERS-SERVICE
-          uri: http://185.125.202.202:9092
+          uri: http://localhost:9092
           predicates:
             - Path=/users/**
         - id: AUTH-SERVICE
-          uri: http://185.125.202.202:9091
+          uri: http://localhost:9091
           predicates:
             - Path=/auth/**
             
