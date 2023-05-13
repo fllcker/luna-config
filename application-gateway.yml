@@ -10,3 +10,11 @@ spring:
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/auth/**
+        - id: WORKSPACES-SERVICE
+          uri: lb://WORKSPACES-SERVICE
+          predicates:
+            - Path=/workspaces/**
+        - id: TASKS-SERVICE
+          uri: lb://TASKS-SERVICE
+          predicates:
+            - Path=/tasks/**
