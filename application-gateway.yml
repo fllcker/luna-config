@@ -22,3 +22,7 @@ spring:
           uri: lb://TASKS-SERVICE
           predicates:
             - Path=/tasks/**
+        - id: INVITATIONS-SERVICE
+          uri: lb://INVITATIONS-SERVICE
+          predicates:
+            - Path=/invitations/**
